@@ -13,12 +13,11 @@ export function createElement(elementName: string) {
   }
 }
 
+// Element icon SVGs are shipped as static files under public/img/ and served at
+// <base>/img/<name>.svg. We reference them via BASE_URL so the path is correct
+// regardless of where the app is mounted. (The original dynamic
+// `new URL(`...${name}.svg`, import.meta.url)` couldn't be statically bundled
+// by Vite and resolved to the wrong location.)
 export function getImgUrl(elementName: string) {
-  try {
-    const elementImg = new URL(`../../../assets/img/${elementName}.svg`, import.meta.url).href;
-    return elementImg;
-  } catch (e) {
-    console.error("Error loading image:", e);
-    return "";
-  }
+  return `${import.meta.env.BASE_URL}img/${elementName}.svg`;
 }

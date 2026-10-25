@@ -5,30 +5,6 @@
         "spanClass": "caret",
         "dropdownItems": [
             {
-                "id": "1",
-                "item": "new_project",
-                "itemid": "newProject",
-                "attributes": []
-            },
-            {
-                "id": "2",
-                "item": "save_online",
-                "itemid": "save",
-                "attributes": []
-            },
-            {
-                "id": "3",
-                "item": "save_offline",
-                "itemid": "saveOffline",
-                "attributes": []
-            },
-            {
-                "id": "4",
-                "item": "open_offline",
-                "itemid": "createOpenLocalPrompt",
-                "attributes": []
-            },
-            {
                 "id": "5",
                 "item": "export_as_file",
                 "itemid": "ExportProject",
@@ -47,27 +23,10 @@
                 "attributes": []
             },
             {
-                "id": "8",
-                "item": "recover_project",
-                "itemid": "recoverProject",
-                "attributes": []
-            },
-            {
                 "id": "9",
                 "item": "preview_circuit",
                 "itemid": "fullViewOption",
                 "attributes": []
-            },
-            {
-                "id": "10",
-                "item": "view_previous_ui",
-                "itemid": "",
-                "attributes": [
-                    {
-                        "name": "onclick",
-                        "value": "old_ui_redirect()"
-                    }
-                ]
             }
         ]
     },
@@ -185,33 +144,6 @@
                     {
                         "name": "href",
                         "value": "https://learn.circuitverse.org"
-                    },
-                    {
-                        "name": "target",
-                        "value": "_blank"
-                    },
-                    {
-                        "name": "role",
-                        "value": "button"
-                    },
-                    {
-                        "name": "aria-haspopup",
-                        "value": "true"
-                    },
-                    {
-                        "name": "aria-expanded",
-                        "value": "false"
-                    }
-                ]
-            },
-            {
-                "id": "4",
-                "item": "discussion_forum",
-                "itemid": "",
-                "attributes": [
-                    {
-                        "name": "href",
-                        "value": "https://circuitverse.org/forum"
                     },
                     {
                         "name": "target",

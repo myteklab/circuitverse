@@ -107,10 +107,13 @@ function BlockElementPan() {
             for (let j = 0; j < globalScope[objectList[i]].length; j++) {
                 if (globalScope[objectList[i]][j].isHover()) {
                     ele.style.display = 'block';
+                    // textContent, not innerHTML: the subcircuit name is
+                    // author-supplied project data, and this view is served
+                    // from the platform's own origin.
                     if (objectList[i] === 'SubCircuit') {
-                        ele.innerHTML = `Subcircuit: ${globalScope.SubCircuit[j].data.name}`;
+                        ele.textContent = `Subcircuit: ${globalScope.SubCircuit[j].data.name}`;
                     } else {
-                        ele.innerHTML = `CircuitElement: ${objectList[i]}`;
+                        ele.textContent = `CircuitElement: ${objectList[i]}`;
                     }
                     return;
                 }
@@ -118,7 +121,7 @@ function BlockElementPan() {
         }
     }
     ele.style.display = 'none';
-    document.getElementById('elementName').innerHTML = '';
+    document.getElementById('elementName').textContent = '';
 }
 
 export default function startListeners() {

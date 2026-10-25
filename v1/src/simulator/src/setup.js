@@ -189,7 +189,9 @@ async function fetchProjectData(projectId) {
  * @category setup
  */
 async function loadProjectData() {
-    window.logixProjectId = window.logixProjectId ?? 0
+    // The embed route assigns an absent optional :projectId as '', which is not
+    // nullish, so ?? let an empty id through and fired a doomed backend fetch.
+    window.logixProjectId = window.logixProjectId || 0
     if (window.logixProjectId !== 0) {
         fadeInLoadingIcons()
         await fetchProjectData(window.logixProjectId)

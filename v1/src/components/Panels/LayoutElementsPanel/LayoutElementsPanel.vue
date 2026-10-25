@@ -73,12 +73,9 @@ const dragElement = (groupType: string, element: any, index: number) => {
     )
 }
 
+// Element icon SVGs are shipped under public/img/ (see ElementsPanel).
 function getImgUrl(elementName: string) {
-  const elementImg = new URL(
-    `../../../simulator/src/img/${elementName}.svg`,
-    import.meta.url
-  ).href;
-  return elementImg;
+  return `${import.meta.env.BASE_URL}img/${elementName}.svg`;
 }
 </script>
 
